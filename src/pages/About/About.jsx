@@ -1,75 +1,99 @@
 import HeroImg from "@/assets/images/hero.png";
-import OlovaLogo from "@/assets/images/olova.png";
 
 export default function About() {
   return (
     <>
-      <section id="about" className="py-16 md:py-32  text-white bg-[#04081A]">
-        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16">
-          <h3 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-white">
-            Software Engineer | <br />  MERN Stack Developer
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
-            <div className="relative mb-6 sm:mb-0">
-              <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent">
-                <img
-                  src={HeroImg}
-                  className="rounded-[15px] shadow block w-full h-[40rem] object-cover object-top"
-                  alt="Hemant Profile Picture"
-                />
-              </div>
-            </div>
+      <section id="about" className="py-16 md:py-32 text-white bg-[#04081A] relative overflow-hidden">
 
-            <div className="relative space-y-4">
-              <ul className="text-white space-y-3 list-disc pl-5">
-                <li>
-                  Hello! I'm Hemant Kumar, an aspiring Software Development Engineer
-                  and passionate developer who enjoys building scalable web
-                  applications and solving complex problems through code.
+        {/* Ambient blurs */}
+        <div className="absolute top-1/4 left-0 w-80 h-80 bg-purple-700/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 relative z-10">
+
+          {/* Section Title */}
+          <h4 className="relative z-10 max-w-xl text-4xl font-bold lg:text-5xl text-white font-poppins">
+            AI/ML Engineer&nbsp;|&nbsp;<br />
+            <span className="gradient-text">DevOps Engineer</span>
+          </h4>
+
+          {/* Grid: text LEFT, image RIGHT */}
+          <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
+
+            {/* Text column (left) */}
+            <div className="relative space-y-4 order-2 sm:order-1">
+              <ul className="text-gray-300 space-y-4 list-none pl-0">
+                <li className="flex gap-3">
+                  <span className="text-purple-400 mt-1 shrink-0">▹</span>
+                  <div>
+                    Hello! I&apos;m <strong className="text-white">Vansh Mukhi</strong>, a passionate AI/ML and DevOps Engineer who enjoys building intelligent systems and deploying them at scale.
+                  </div>
                 </li>
-                <li>
-                  <span className="font-bold text-white">
-                    I specialize in the MERN Stack (MongoDB, Express.js, React.js, Node.js)
-                  </span>{" "}
-                  and have strong foundations in Data Structures & Algorithms,
-                  having solved 500+ coding problems on platforms like LeetCode
-                  and GeeksforGeeks.
+                <li className="flex gap-3">
+                  <span className="text-cyan-400 mt-1 shrink-0">▹</span>
+                  <div>
+                    I specialize in developing{" "}
+                    <strong className="text-white">machine learning models</strong>{" "}
+                    and integrating them into production environments using CI/CD pipelines and cloud platforms.
+                  </div>
                 </li>
-                <li>
-                  My focus is on developing efficient, scalable, and user-friendly
-                  applications. I enjoy working across the full stack, designing
-                  intuitive interfaces while also building powerful backend systems.
+                <li className="flex gap-3">
+                  <span className="text-purple-400 mt-1 shrink-0">▹</span>
+                  <div>
+                    My expertise includes working with{" "}
+                    <strong className="text-white">Docker, Kubernetes, and cloud services</strong>{" "}
+                    to ensure scalable and reliable systems.
+                  </div>
                 </li>
-                <li>
-                  Currently, I am expanding my expertise in system design,
-                  backend architecture, and AI/ML, aiming to build impactful
-                  software solutions.
+                <li className="flex gap-3">
+                  <span className="text-cyan-400 mt-1 shrink-0">▹</span>
+                  <div>
+                    I am continuously learning and exploring areas like{" "}
+                    <strong className="text-white">MLOps, distributed systems</strong>, and cloud-native architectures.
+                  </div>
                 </li>
               </ul>
 
-              <div className="pt-6">
-                <blockquote className="border-l-4 border-gray-300 pl-4">
-                  <p className="text-white">
-                    I'm a passionate learner and problem solver who enjoys
-                    turning ideas into real-world applications. I constantly
-                    explore new technologies and improve my skills to build
-                    better, scalable software.
-                  </p>
+              {/* Tech chips */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {["Python", "TensorFlow", "Docker", "Kubernetes", "AWS", "CI/CD", "MLOps"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 border border-purple-500/25 text-purple-300 hover:bg-purple-500/20 transition-colors duration-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
 
-                  <div className="mt-6 space-y-3">
-                    <cite className="block font-medium text-white">
-                      Hemant Kumar
+              <div className="pt-6">
+                <blockquote className="border-l-4 border-purple-500/60 pl-4 bg-purple-500/5 py-3 rounded-r-lg">
+                  <p className="text-gray-300 italic">
+                    "Automate everything. Scale anything. Learn continuously."
+                  </p>
+                  <div className="mt-4 space-y-1">
+                    <cite className="block font-bold text-white not-italic">
+                      Vansh Mukhi
                     </cite>
-                    <div className="flex flex-col gap-1">
-                      <span className="text-white/80 text-sm">
-                        Aspiring Software Development Engineer
-                      </span>
-                      <span className="text-blue-400 font-medium italic">
-                        "Code. Build. Optimize. Repeat." ⚡
-                      </span>
-                    </div>
+                    <span className="text-gray-400 text-sm">
+                      AI/ML & DevOps Engineer
+                    </span>
+                    <span className="block text-purple-400 font-medium italic text-sm">
+                      ⚡ Systems Thinker. Cloud Native. Always Shipping.
+                    </span>
                   </div>
                 </blockquote>
+              </div>
+            </div>
+
+            {/* Image column (right) */}
+            <div className="relative mb-6 sm:mb-0 order-1 sm:order-2">
+              <div className="bg-gradient-to-b aspect-76/59 relative rounded-3xl p-px from-purple-500/60 via-cyan-500/40 to-transparent shadow-[0_0_40px_rgba(168,85,247,0.2)]">
+                <img
+                  src={HeroImg}
+                  className="rounded-[22px] shadow-2xl block w-full h-[40rem] object-cover object-top"
+                  alt="Vansh Mukhi Profile"
+                />
               </div>
             </div>
           </div>

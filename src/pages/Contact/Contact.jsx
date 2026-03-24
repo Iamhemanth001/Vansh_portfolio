@@ -14,20 +14,20 @@ export default function Contact() {
     {
       icon: <Mail className="w-6 h-6 text-blue-400" />,
       title: "Email",
-      value: "hemanthkumar23054@gmail.com",
-      link: "mailto:hemanthkumar23054@gmail.com"
+      value: "vanshmukhi41@gmail.com",
+      link: "mailto:vanshmukhi41@gmail.com"
     },
     {
       icon: <Linkedin className="w-6 h-6 text-blue-500" />,
       title: "LinkedIn",
-      value: "linkedin.com/in/hemanthkumar001",
-      link: "https://www.linkedin.com/in/hemanthkumar001/"
+      value: "linkedin.com/in/vansh-mukhi",
+      link: "https://www.linkedin.com/in/vansh-mukhi/"
     },
     {
       icon: <Github className="w-6 h-6 text-gray-300" />,
       title: "GitHub",
-      value: "github.com/Iamhemanth001",
-      link: "https://github.com/Iamhemanth001"
+      value: "github.com/Vansh-Mukhi",
+      link: "https://github.com/Vansh-Mukhi"
     }
   ];
 
@@ -57,7 +57,7 @@ export default function Contact() {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[128px] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <motion.div 
+        <motion.div
           className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-7xl mx-auto"
           variants={containerVariants}
           initial="hidden"
@@ -122,9 +122,9 @@ export default function Contact() {
             <div className="relative group">
               {/* Outer Glow Effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl md:rounded-[2rem] opacity-20 group-hover:opacity-40 blur-xl transition duration-700" />
-              
+
               <div className="relative p-8 md:p-10 rounded-2xl md:rounded-[2rem] bg-gray-900/80 backdrop-blur-xl border border-white/10 shadow-2xl flex flex-col h-full">
-                
+
                 <div className="mb-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Schedule a Meeting</h3>
                   <p className="text-blue-400 flex items-center gap-2 font-medium">
@@ -163,7 +163,7 @@ export default function Contact() {
                     <span className="relative z-10">Request a Meeting</span>
                     <Send className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                   </motion.a>
-                  
+
                   <p className="text-center text-sm text-gray-500 mt-6 flex items-center justify-center gap-2">
                     <span className="text-yellow-400">⚡</span> Usually responds within 24 hours
                   </p>

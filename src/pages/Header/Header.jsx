@@ -34,7 +34,7 @@ export default function Header() {
     {
       id: "training",
       icon: FaBriefcase,
-      text: "Training",
+      text: "Experience",
       path: "/training",
     },
     {
@@ -50,10 +50,10 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur-md md:bg-transparent md:backdrop-blur-none">
-      <div className="md:fixed md:top-4 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto">
-        <div className="p-[2px] md:rounded-full bg-gradient-to-r from-emerald-400 via-cyan-500 to-indigo-500 animate-gradient-x">
-          <nav className="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900/60 backdrop-blur-xl border-b border-gray-800/50 md:bg-transparent md:backdrop-blur-none md:border-none">
+      <div className="md:fixed md:top-6 md:left-1/2 md:transform md:-translate-x-1/2 w-full md:w-auto transition-all duration-300">
+        <div className="p-[1.5px] md:rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-violet-500 animate-gradient-x shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+          <nav className="bg-[#04081a]/90 backdrop-blur-xl md:rounded-full px-4 md:px-6 py-2.5">
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
               <Link to="/" className="text-white font-bold">Portfolio</Link>
@@ -78,11 +78,10 @@ export default function Header() {
                     }}
                     className={`px-3 py-2 md:py-1.5 rounded-lg md:rounded-full text-sm font-medium
                       transition-all duration-300 flex items-center gap-2
-                      hover:bg-white/10 
                       ${
                         activeLink === id
-                          ? "bg-white/15 text-white"
-                          : "text-gray-300 hover:text-white"
+                          ? "bg-purple-500/20 text-purple-300 shadow-[inset_0_0_10px_rgba(168,85,247,0.1)]"
+                          : "text-gray-400 hover:text-white hover:bg-white/5"
                       }
                     `}
                   >
